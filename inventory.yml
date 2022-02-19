@@ -1,5 +1,12 @@
 ---
 
+all:
+  children:
+    virtual-machines:
+      hosts:
+        comparch:
+          ansible_host: comparch.ee.cooper.edu
+
 ungrouped:
   hosts:
     # nonexistent DNS record, for internal testing only
