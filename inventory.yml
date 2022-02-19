@@ -1,0 +1,7 @@
+---
+
+ungrouped:
+  hosts:
+    # nonexistent DNS record, for internal testing only
+    test:
+      ansible_host: test.ee.cooper.edu
