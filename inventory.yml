@@ -7,6 +7,14 @@ all:
         comparch:
           ansible_host: comparch.ee.cooper.edu
 
+    micro:
+      hosts:
+        micro[01:14].ee.cooper.edu
+
+    workstations:
+      children:
+        micro:
+
 ungrouped:
   hosts:
     # nonexistent DNS record, for internal testing only
