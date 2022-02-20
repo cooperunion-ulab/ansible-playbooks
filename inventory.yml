@@ -2,10 +2,9 @@
 
 all:
   children:
-    virtual-machines:
+    comparch:
       hosts:
-        comparch:
-          ansible_host: comparch.ee.cooper.edu
+        comparch.ee.cooper.edu
 
     ice:
       hosts:
@@ -15,10 +14,16 @@ all:
       hosts:
         micro[01:14].ee.cooper.edu
 
+
+    virtual_machines:
+      children:
+        comparch:
+
     workstations:
       children:
         ice:
         micro:
+
 
 ungrouped:
   hosts:
