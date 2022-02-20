@@ -10,6 +10,10 @@ all:
       hosts:
         ice[01:12].ee.cooper.edu
 
+    junior:
+      hosts:
+        junior[01:12].ee.cooper.edu
+
     micro:
       hosts:
         micro[01:14].ee.cooper.edu
@@ -22,6 +26,7 @@ all:
     workstations:
       children:
         ice:
+        junior:
         micro:
 
 
