@@ -7,12 +7,17 @@ all:
         comparch:
           ansible_host: comparch.ee.cooper.edu
 
+    ice:
+      hosts:
+        ice[01:12].ee.cooper.edu
+
     micro:
       hosts:
         micro[01:14].ee.cooper.edu
 
     workstations:
       children:
+        ice:
         micro:
 
 ungrouped:
