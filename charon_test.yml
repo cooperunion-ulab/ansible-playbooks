@@ -1,0 +1,11 @@
+---
+# Test playbook, to see if we can set up charon
+
+- name: install and configure all necessary stuff on charon
+  hosts: charon
+  remote-user: root
+
+  roles:
+  - charon-packages
+  #- charon-config
+  #- charon-users

@@ -1,0 +1,5 @@
+---
+# Main handler file for charon-packages stuff
+
+- name: check if anyone actually notifies this
+  command: echo 'hey, this handler got called'

@@ -1,0 +1,8 @@
+---
+# Main tasks file, updates packages and stuff
+
+- name: install tmux
+  apt:
+    name: tmux
+    state: present
+  notify: check if anyone actually notifies this
