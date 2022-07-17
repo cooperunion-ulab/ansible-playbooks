@@ -29,3 +29,22 @@
   apt:
     name: make
     state: latest
+
+# cbonsai, as an exercise in building stuff from source
+- name: install libncurses-dev
+  apt:
+    name: libncurses-dev
+    state: latest
+- name: install git
+  apt:
+    name: git
+    state: latest
+- name: clone cbonsai source
+  git:
+    repo: https://gitlab.com/jallbrit/cbonsai
+    dest: /root/source-builds/cbonsai
+- name: build and install cbonsai
+  command:
+    cmd: /usr/bin/make install
+    chdir: /root/source-builds/cbonsai
+    creates: /usr/local/bin/cbonsai
