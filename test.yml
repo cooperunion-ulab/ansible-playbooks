@@ -1,0 +1,11 @@
+---
+# test playbook, just to try some stuff out
+- name: copy some files around to see if we can
+  hosts: comparch
+  remote_user: charles.vanwest
+
+  tasks:
+  - name: copy this file to the user's home directory
+    ansible.builtin.template:
+      src: /home/charles/CU/microlab/ansible-playbooks/test.yml
+      dest: /afs/ee.cooper.edu/user/c/charles.vanwest/test.yml
