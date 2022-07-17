@@ -3,7 +3,7 @@
 
 - name: install and configure all necessary stuff on charon
   hosts: charon
-  remote-user: root
+  remote_user: root
 
   roles:
   - charon-packages
