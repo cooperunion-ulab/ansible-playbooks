@@ -1,8 +1,31 @@
 ---
 # Main tasks file, updates packages and stuff
 
+# distro upgrade first!
+- name: ensure everything's upgraded
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+# now, packages
 - name: install tmux
   apt:
     name: tmux
-    state: present
+    state: latest
   notify: check if anyone actually notifies this
+- name: install gcc
+  apt:
+    name: gcc
+    state: latest
+- name: install g++
+  apt:
+    name: g++
+    state: latest
+- name: install tree
+  apt:
+    name: tree
+    state: latest
+- name: install make
+  apt:
+    name: make
+    state: latest
