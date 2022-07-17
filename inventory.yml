@@ -4,7 +4,8 @@ all:
   children:
     charon:
       hosts:
-        charon.ee.cooper.edu
+        charon.ee.cooper.edu:
+        10.5.0.56:
 
     comparch:
       hosts:
