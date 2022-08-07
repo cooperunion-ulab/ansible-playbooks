@@ -13,11 +13,13 @@ packages_editors:
   - '{{ package_vim }}'
 
 # goodies
+package_cbonsai:  'cbonsai'
 package_cowsay:   'cowsay'
 package_neofetch: 'neofetch'
 package_sl:       'sl'
 
 packages_goodies:
+  - '{{ package_cbonsai }}'
   - '{{ package_cowsay }}'
   - '{{ package_neofetch }}'
   - '{{ package_sl }}'
