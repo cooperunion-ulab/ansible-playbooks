@@ -2,9 +2,9 @@
 
 all:
   children:
-    charon:
-      hosts:
-        charon.ee.cooper.edu
+    # charon:
+    #   hosts:
+    #     charon.ee.cooper.edu
 
     comparch:
       hosts:
@@ -18,30 +18,30 @@ all:
       hosts:
         ice[01:12].ee.cooper.edu
 
-    junior:
-      hosts:
-        junior[01:12].ee.cooper.edu
+    # junior:
+    #   hosts:
+    #     junior[01:12].ee.cooper.edu
 
     micro:
       hosts:
         micro[01:14].ee.cooper.edu
 
-    senior:
-      hosts:
-        senior[01:17].ee.cooper.edu
+    # senior:
+    #   hosts:
+    #     senior[01:17].ee.cooper.edu
 
 
     virtual_machines:
       children:
-        charon:
+        # charon:
         comparch:
 
     workstations:
       children:
         ice:
-        junior:
+        # junior:
         micro:
-        senior:
+        # senior:
 
 
 ungrouped:
