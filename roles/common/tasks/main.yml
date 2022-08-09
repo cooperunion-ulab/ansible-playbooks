@@ -30,3 +30,10 @@
     name: '{{ item }}'
     state: present
   with_items: '{{ packages_utils }}'
+
+- name: 'include OS-specific tasks'
+  ansible.builtin.include_tasks: '{{ item }}'
+  with_first_found:
+    - files:
+      - '{{ ansible_distribution }}.yml'
+      skip: true
