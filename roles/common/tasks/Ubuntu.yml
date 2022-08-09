@@ -1,0 +1,13 @@
+---
+
+- name: 'symlink `batcat` as `bat`'
+  ansible.builtin.file:
+    src: '/usr/bin/batcat'
+    path: '/usr/local/bin/bat'
+    state: 'link'
+
+- name: 'symlink `fdfind` as `fd`'
+  ansible.builtin.file:
+    src: '/usr/bin/fdfind'
+    path: '/usr/local/bin/fd'
+    state: 'link'

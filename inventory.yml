@@ -2,42 +2,46 @@
 
 all:
   children:
-    charon:
+    # charon:
+    #   hosts:
+    #     charon.ee.cooper.edu
+
+    # comparch:
+    #   hosts:
+    #     comparch.ee.cooper.edu
+
+    cs102:
       hosts:
-        charon.ee.cooper.edu
+        cs102.cooper.edu
 
-    comparch:
-      hosts:
-        comparch.ee.cooper.edu
+    # ice:
+    #   hosts:
+    #     ice[01:12].ee.cooper.edu
 
-    ice:
-      hosts:
-        ice[01:12].ee.cooper.edu
+    # junior:
+    #   hosts:
+    #     junior[01:12].ee.cooper.edu
 
-    junior:
-      hosts:
-        junior[01:12].ee.cooper.edu
+    # micro:
+    #   hosts:
+    #     micro[01:14].ee.cooper.edu
 
-    micro:
-      hosts:
-        micro[01:14].ee.cooper.edu
-
-    senior:
-      hosts:
-        senior[01:17].ee.cooper.edu
+    # senior:
+    #   hosts:
+    #     senior[01:17].ee.cooper.edu
 
 
-    virtual_machines:
-      children:
-        charon:
-        comparch:
+    # virtual_machines:
+    #   children:
+    #     charon:
+    #     comparch:
 
-    workstations:
-      children:
-        ice:
-        junior:
-        micro:
-        senior:
+    # workstations:
+    #   children:
+    #     ice:
+    #     junior:
+    #     micro:
+    #     senior:
 
 
 ungrouped:
