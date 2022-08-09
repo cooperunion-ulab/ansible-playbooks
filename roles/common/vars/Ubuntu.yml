@@ -1,4 +1,5 @@
 ---
 
 # utils
-package_fd: 'fd-find'
+package_fd:        'fd-find'
+package_man_pages: 'manpages-posix-dev'
