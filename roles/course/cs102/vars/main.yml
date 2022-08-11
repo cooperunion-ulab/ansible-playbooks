@@ -1,0 +1,41 @@
+---
+
+# build
+package_cmake: 'cmake'
+package_make:  'make'
+package_meson: 'meson'
+package_scons: 'scons'
+
+packages_build:
+  - '{{ package_cmake }}'
+  - '{{ package_make }}'
+  - '{{ package_meson }}'
+  - '{{ package_scons }}'
+
+# c
+package_binutils:      'binutils'
+package_gcc:           'gcc'
+package_gdb:           'gdb'
+package_linux_headers: 'linux-headers'
+package_valgrind:       'valgrind'
+
+packages_c:
+  - '{{ package_binutils }}'
+  - '{{ package_gcc }}'
+  - '{{ package_gdb }}'
+  - '{{ package_linux_headers }}'
+  - '{{ package_valgrind }}'
+
+# python3
+package_python3:           'python3'
+package_python3_distutils: 'python3-distutils'
+package_python3_pip:       'python3-pip'
+package_python3_venv:      'python3-venv'
+package_python3_wheel:     'python3-wheel'
+
+packages_python3:
+  - '{{ package_python3 }}'
+  - '{{ package_python3_distutils }}'
+  - '{{ package_python3_pip }}'
+  - '{{ package_python3_venv }}'
+  - '{{ package_python3_wheel }}'
