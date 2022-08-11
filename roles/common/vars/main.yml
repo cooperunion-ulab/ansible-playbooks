@@ -51,6 +51,7 @@ package_ripgrep:    'ripgrep'
 package_shellcheck: 'shellcheck'
 package_shfmt:      'shfmt'
 package_tmux:       'tmux'
+package_tree:       'tree'
 
 packages_utils:
   - '{{ package_bat }}'
@@ -67,3 +68,4 @@ packages_utils:
   - '{{ package_shellcheck }}'
   - '{{ package_shfmt }}'
   - '{{ package_tmux }}'
+  - '{{ package_tree }}'
