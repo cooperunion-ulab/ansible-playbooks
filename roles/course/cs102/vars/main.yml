@@ -17,7 +17,7 @@ package_binutils:      'binutils'
 package_gcc:           'gcc'
 package_gdb:           'gdb'
 package_linux_headers: 'linux-headers'
-package_valgrind:       'valgrind'
+package_valgrind:      'valgrind'
 
 packages_c:
   - '{{ package_binutils }}'
