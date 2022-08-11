@@ -4,3 +4,8 @@
   become: true
   roles:
     - common
+
+- hosts: cs102
+  become: true
+  roles:
+    - course/cs102
