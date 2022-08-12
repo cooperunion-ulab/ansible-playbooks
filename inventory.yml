@@ -31,6 +31,9 @@ all:
     #     senior[01:17].ee.cooper.edu
 
 
+    non_ee:
+      cs102:
+
     # virtual_machines:
     #   children:
     #     charon:
