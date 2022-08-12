@@ -14,6 +14,7 @@ packages_build:
 
 # c
 package_binutils:      'binutils'
+package_clang:         'clang'
 package_gcc:           'gcc'
 package_gdb:           'gdb'
 package_linux_headers: 'linux-headers'
@@ -21,6 +22,7 @@ package_valgrind:      'valgrind'
 
 packages_c:
   - '{{ package_binutils }}'
+  - '{{ package_clang }}'
   - '{{ package_gcc }}'
   - '{{ package_gdb }}'
   - '{{ package_linux_headers }}'
