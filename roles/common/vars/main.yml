@@ -15,14 +15,20 @@ packages_editors:
   - '{{ package_vim }}'
 
 # goodies
-package_cbonsai:  'cbonsai'
-package_cowsay:   'cowsay'
-package_neofetch: 'neofetch'
-package_sl:       'sl'
+package_cbonsai:   'cbonsai'
+package_cowsay:    'cowsay'
+package_fortune:   'fortune'
+package_hollywood: 'hollywood'
+package_lolcat:    'lolcat'
+package_neofetch:  'neofetch'
+package_sl:        'sl'
 
 packages_goodies:
   - '{{ package_cbonsai }}'
   - '{{ package_cowsay }}'
+  - '{{ package_fortune }}'
+  - '{{ package_hollywood }}'
+  - '{{ package_lolcat }}'
   - '{{ package_neofetch }}'
   - '{{ package_sl }}'
 
