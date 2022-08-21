@@ -1,12 +1,12 @@
 ---
 
-- hosts: all
+- hosts: 'all'
   become: true
   roles:
-    - common
-    - sys/time
+    - 'common'
+    - 'sys/time'
 
-- hosts: cs102
+- hosts: 'cs102'
   become: true
   roles:
-    - course/cs102
+    - 'course/cs102'
