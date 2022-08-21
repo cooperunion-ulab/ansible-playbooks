@@ -32,7 +32,8 @@ all:
 
 
     non_ee:
-      cs102:
+      children:
+        cs102:
 
     # virtual_machines:
     #   children:
