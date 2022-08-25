@@ -10,6 +10,10 @@ all:
     #   hosts:
     #     comparch.ee.cooper.edu
 
+    conway:
+      hosts:
+        conway.ee.cooper.edu
+
     cs102:
       hosts:
         cs102.cooper.edu
