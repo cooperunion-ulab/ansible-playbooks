@@ -18,6 +18,10 @@ all:
       hosts:
         cs102.cooper.edu
 
+    dev:
+      hosts:
+        dev.ee.cooper.edu
+
     # ice:
     #   hosts:
     #     ice[01:12].ee.cooper.edu
