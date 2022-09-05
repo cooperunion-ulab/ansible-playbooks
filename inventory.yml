@@ -35,7 +35,7 @@ all:
     #     senior[01:17].ee.cooper.edu
 
 
-    non_ee:
+    external:
       children:
         cs102:
 
