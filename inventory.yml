@@ -48,6 +48,12 @@ all:
         conway:
         dev:
 
+
+    gentoo:
+      children:
+        dev:
+
+
     # virtual_machines:
     #   children:
     #     charon:
