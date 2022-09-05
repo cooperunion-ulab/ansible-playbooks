@@ -43,6 +43,11 @@ all:
       children:
         cs102:
 
+    ulab:
+      children:
+        conway:
+        dev:
+
     # virtual_machines:
     #   children:
     #     charon:
