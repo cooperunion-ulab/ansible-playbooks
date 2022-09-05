@@ -1,0 +1,19 @@
+---
+
+- name: 'clone ulab portage git repo'
+  ansible.builtin.git:
+    clone: true
+    dest: '{{ portage_dir }}'
+    force: true
+    repo: '{{ portage_repo }}'
+    update: true
+
+- name: 'link `make.host` to `{{ inventory_hostname }}`'
+  ansible.builtin.file:
+    path: '{{ portage_dir }}/make.host'
+    src: '{{ portage_dir }}/make.conf.d/{{ inventory_hostname }}'
+    state: 'link'
+
+# TODO:
+# * if {{ portage_dir }} exists cloning fails
+# * automatically set make.profile
