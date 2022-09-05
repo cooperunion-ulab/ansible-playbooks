@@ -1,0 +1,39 @@
+---
+
+# editors
+package_ed:     'sys-apps/ed'
+package_emacs:  'app-editors/emacs'
+package_nano:   'app-editors/nano'
+package_neovim: 'app-editors/neovim'
+package_vim:    'app-editors/vim'
+
+# goodies
+package_cbonsai:   'games-misc/cbonsai'
+package_cowsay:    'games-misc/cowsay'
+package_fortune:   'games-misc/fortune-mod'
+package_hollywood: 'app-misc/hollywood'
+package_lolcat:    'games-misc/lolcat'
+package_neofetch:  'app-misc/neofetch'
+package_sl:        'app-misc/sl'
+
+# shells
+package_bash: 'app-shells/bash'
+package_fish: 'app-shells/fish'
+package_zsh:  'app-shells/zsh'
+
+# utils
+package_bat:        'sys-apps/bat'
+package_exa:        'sys-apps/exa'
+package_fd:         'sys-apps/fd'
+package_fzf:        'app-shells/fzf'
+package_git:        'dev-vcs/git'
+package_git_lfs:    'dev-vcs/git-lfs'
+package_gnupg:      'app-crypt/gnupg'
+package_htop:       'sys-process/htop'
+package_man:        'sys-apps/man-db'
+package_man_pages:  'sys-apps/man-pages'
+package_ripgrep:    'sys-apps/ripgrep'
+package_shellcheck: 'dev-util/shellcheck'
+package_shfmt:      'dev-util/shfmt'
+package_tmux:       'app-misc/tmux'
+package_tree:       'app-text/tree'
