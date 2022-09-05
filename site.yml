@@ -1,5 +1,7 @@
 ---
 
+- import_playbook: 'pre_tasks.yml'
+
 - hosts: 'all'
   become: true
   roles:

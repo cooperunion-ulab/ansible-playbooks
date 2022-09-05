@@ -1,0 +1,6 @@
+---
+
+- hosts: 'gentoo'
+  become: true
+  roles:
+    - 'distro/gentoo/portage'
