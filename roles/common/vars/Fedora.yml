@@ -1,0 +1,8 @@
+---
+
+# goodies
+package_fortune: 'fortune-mod'
+
+# utils
+package_fd:         'fd-find'
+package_shellcheck: 'ShellCheck'
