@@ -25,21 +25,3 @@ ulab:
     # senior:
     #   hosts:
     #     senior[01:17].ee.cooper.edu
-
-
-    gentoo:
-      children:
-        dev:
-
-
-    # virtual_machines:
-    #   children:
-    #     charon:
-    #     comparch:
-
-    # workstations:
-    #   children:
-    #     ice:
-    #     junior:
-    #     micro:
-    #     senior:
