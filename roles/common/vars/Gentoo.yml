@@ -8,13 +8,12 @@ package_neovim: 'app-editors/neovim'
 package_vim:    'app-editors/vim'
 
 # goodies
-package_cbonsai:   'games-misc/cbonsai'
-package_cowsay:    'games-misc/cowsay'
-package_fortune:   'games-misc/fortune-mod'
-package_hollywood: 'app-misc/hollywood'
-package_lolcat:    'games-misc/lolcat'
-package_neofetch:  'app-misc/neofetch'
-package_sl:        'app-misc/sl'
+package_cbonsai:  'games-misc/cbonsai'
+package_cowsay:   'games-misc/cowsay'
+package_fortune:  'games-misc/fortune-mod'
+package_lolcat:   'games-misc/lolcat'
+package_neofetch: 'app-misc/neofetch'
+package_sl:       'app-misc/sl'
 
 # shells
 package_bash: 'app-shells/bash'
