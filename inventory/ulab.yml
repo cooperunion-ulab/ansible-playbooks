@@ -5,11 +5,11 @@ ulab:
 
     conway:
       hosts:
-        conway.ee.cooper.edu
+        conway.ee.cooper.edu:
 
     dev:
       hosts:
-        dev.ee.cooper.edu
+        dev.ee.cooper.edu:
 
     # ice:
     #   hosts:
