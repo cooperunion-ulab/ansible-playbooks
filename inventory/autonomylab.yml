@@ -1,0 +1,9 @@
+---
+
+autonomylab:
+  children:
+
+    dbw:
+      hosts:
+        dbw-gucci.host.autonomylab.nyc
+        dbw-prada.host.autonomylab.nyc
