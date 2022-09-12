@@ -3,6 +3,10 @@
 autonomylab:
   children:
 
+    ctrls:
+      hosts:
+        ctrls-heehee.host.autonomylab.nyc:
+
     dbw:
       hosts:
         dbw-gucci.host.autonomylab.nyc:
