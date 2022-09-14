@@ -4,3 +4,6 @@
 ipaclient_domain:  'igvc.internal'
 ipaclient_realm:   'IGVC.INTERNAL'
 ipaclient_servers: 'ipa.igvc.internal'
+
+nfs_mnt_point: '/igvctank'
+nfs_share:     '199.98.27.230:rpool/share'
