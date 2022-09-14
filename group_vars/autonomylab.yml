@@ -1,0 +1,6 @@
+---
+
+# NOTE: igvc.internal is deprecated
+ipaclient_domain:  'igvc.internal'
+ipaclient_realm:   'IGVC.INTERNAL'
+ipaclient_servers: 'ipa.igvc.internal'
