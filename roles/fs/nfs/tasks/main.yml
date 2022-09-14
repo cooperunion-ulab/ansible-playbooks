@@ -1,6 +1,6 @@
 ---
 
-- name: 'install nft-utils'
+- name: 'install NFS-Utils'
   ansible.builtin.package:
     name: '{{ package_nfs_utils }}'
     state: 'present'
