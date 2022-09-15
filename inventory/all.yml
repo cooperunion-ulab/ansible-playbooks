@@ -3,6 +3,11 @@
 all:
   children:
 
+    ee:
+      children:
+        autonomylab:
+        ulab:
+
     gentoo:
       children:
         dev:
