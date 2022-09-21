@@ -12,6 +12,11 @@ autonomylab:
         dbw-gucci.host.autonomylab.nyc:
         dbw-prada.host.autonomylab.nyc:
 
+    laptop:
+      hosts:
+        laptop-car-sable.host.autonomylab.nyc:
+        laptop-nae-nae-baby.host.autonomylab.nyc:
+
     tech:
       hosts:
         tech-slayyy.host.autonomylab.nyc:
