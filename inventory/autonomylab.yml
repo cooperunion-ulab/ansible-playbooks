@@ -11,3 +11,7 @@ autonomylab:
       hosts:
         dbw-gucci.host.autonomylab.nyc:
         dbw-prada.host.autonomylab.nyc:
+
+    tech:
+      hosts:
+        tech-slayyy.host.autonomylab.nyc:
