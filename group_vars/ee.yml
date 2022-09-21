@@ -1,0 +1,3 @@
+---
+
+ipaclient_no_ntp: true  # ntp configured by role 'sys/time'
