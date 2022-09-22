@@ -13,6 +13,7 @@
   roles:
     - 'net/ssh'
     - 'pkg/can'
+    - 'pkg/container'
 
 - hosts: 'cs102'
   become: true
