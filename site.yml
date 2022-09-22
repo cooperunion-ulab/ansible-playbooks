@@ -12,6 +12,7 @@
   become: true
   roles:
     - 'net/ssh'
+    - 'pkg/can'
 
 - hosts: 'cs102'
   become: true
