@@ -1,0 +1,6 @@
+---
+
+package_docker: 'docker'
+package_podman: 'podman'
+
+docker_daemon: 'docker'
