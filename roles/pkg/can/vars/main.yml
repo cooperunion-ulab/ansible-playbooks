@@ -1,0 +1,4 @@
+---
+
+package_can_utils:   'can-utils'
+package_python3_can: 'python3-can'
