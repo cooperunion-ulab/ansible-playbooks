@@ -8,6 +8,11 @@
     - 'common'
     - 'sys/time'
 
+- hosts: 'ee'
+  become: true
+  roles:
+    - 'net/ssh'
+
 - hosts: 'cs102'
   become: true
   roles:
