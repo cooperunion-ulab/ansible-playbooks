@@ -1,9 +1,9 @@
 - name: 'install can-utils'
   ansible.builtin.package:
     name: '{{ package_can_utils }}'
-    state: present
+    state: 'present'
 
 - name: 'install python3-can'
   ansible.builtin.package:
     name: '{{ package_python3_can }}'
-    state: present
+    state: 'present'

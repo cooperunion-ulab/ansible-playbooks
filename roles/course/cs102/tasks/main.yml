@@ -10,17 +10,17 @@
 - name: 'install build tools'
   ansible.builtin.package:
     name: '{{ item }}'
-    state: present
+    state: 'present'
   with_items: '{{ packages_build }}'
 
 - name: 'install c tools'
   ansible.builtin.package:
     name: '{{ item }}'
-    state: present
+    state: 'present'
   with_items: '{{ packages_c }}'
 
 - name: 'install python3 tools'
   ansible.builtin.package:
     name: '{{ item }}'
-    state: present
+    state: 'present'
   with_items: '{{ packages_python3 }}'
