@@ -1,0 +1,6 @@
+---
+
+package_cmake: 'cmake'
+package_make:  'make'
+package_meson: 'meson'
+package_scons: 'scons'
