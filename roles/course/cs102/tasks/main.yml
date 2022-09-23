@@ -7,12 +7,6 @@
       - '{{ ansible_distribution }}.yml'
       skip: true
 
-- name: 'install build tools'
-  ansible.builtin.package:
-    name: '{{ item }}'
-    state: 'present'
-  with_items: '{{ packages_build }}'
-
 - name: 'install c tools'
   ansible.builtin.package:
     name: '{{ item }}'

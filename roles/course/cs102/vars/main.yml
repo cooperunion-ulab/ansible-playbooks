@@ -1,17 +1,5 @@
 ---
 
-# build
-package_cmake: 'cmake'
-package_make:  'make'
-package_meson: 'meson'
-package_scons: 'scons'
-
-packages_build:
-  - '{{ package_cmake }}'
-  - '{{ package_make }}'
-  - '{{ package_meson }}'
-  - '{{ package_scons }}'
-
 # c
 package_binutils:      'binutils'
 package_clang:         'clang'
