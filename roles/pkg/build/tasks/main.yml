@@ -1,0 +1,21 @@
+---
+
+- name: 'install CMake'
+  ansible.builtin.package:
+    name: '{{ package_cmake }}'
+    state: 'present'
+
+- name: 'install Make'
+  ansible.builtin.package:
+    name: '{{ package_make }}'
+    state: 'present'
+
+- name: 'install Meson Build'
+  ansible.builtin.package:
+    name: '{{ package_meson }}'
+    state: 'present'
+
+- name: 'install SCons'
+  ansible.builtin.package:
+    name: '{{ package_scons }}'
+    state: 'present'
