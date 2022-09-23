@@ -12,6 +12,7 @@
   become: true
   roles:
     - 'net/ssh'
+    - 'pkg/build'
     - 'pkg/can'
     - 'pkg/container'
 
