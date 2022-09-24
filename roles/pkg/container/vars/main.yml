@@ -1,6 +1,7 @@
 ---
 
-package_docker: 'docker'
-package_podman: 'podman'
+package_docker:         'docker'
+package_docker_compose: 'docker-compose'
+package_podman:         'podman'
 
 docker_daemon: 'docker'

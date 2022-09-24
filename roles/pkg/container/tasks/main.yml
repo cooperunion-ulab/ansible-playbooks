@@ -3,6 +3,11 @@
     name: '{{ package_docker }}'
     state: 'present'
 
+- name: 'install Docker Compose'
+  ansible.builtin.package:
+    name: '{{ package_docker_compose }}'
+    state: 'present'
+
 - name: 'install Podman'
   ansible.builtin.package:
     name: '{{ package_podman }}'
