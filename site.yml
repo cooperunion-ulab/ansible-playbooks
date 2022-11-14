@@ -14,9 +14,11 @@
     - 'pkg/build'
     - 'pkg/can'
     - 'pkg/container'
+    - 'pkg/editor'
 
 - hosts: 'cs102'
   become: true
   roles:
     - 'course/cs102'
     - 'pkg/build'
+    - 'pkg/editor'
