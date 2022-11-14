@@ -1,5 +1,10 @@
 ---
 
+- hosts: 'all'
+  become: true
+  roles:
+    - 'repo/microsoft'
+
 - hosts: 'gentoo'
   become: true
   roles:
