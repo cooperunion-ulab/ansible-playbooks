@@ -4,3 +4,8 @@
   become: true
   roles:
     - 'distro/gentoo/portage'
+
+- hosts: 'all'
+  become: true
+  roles:
+    - 'sys/time'

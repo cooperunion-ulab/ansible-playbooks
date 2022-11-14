@@ -6,7 +6,6 @@
   become: true
   roles:
     - 'common'
-    - 'sys/time'
 
 - hosts: 'ee'
   become: true
