@@ -1,3 +1,5 @@
 ---
 
+systemd_timesyncd: 'systemd-timesyncd'
+
 ntp_daemon: 'systemd-timesyncd'

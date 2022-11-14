@@ -4,6 +4,12 @@
   community.general.timezone:
     name: '{{ timezone }}'
 
+- name: 'install `{{ systemd_timesyncd }}`'
+  ansible.builtin.package:
+    name: '{{ systemd_timesyncd }}'
+    state: 'present'
+  when: ansible_facts['distribution'] != 'Gentoo'
+
 - name: 'enable NTP daemon (`{{ ntp_daemon }}`)'
   ansible.builtin.service:
     enabled: true
