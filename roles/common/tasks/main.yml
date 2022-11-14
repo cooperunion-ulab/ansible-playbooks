@@ -7,12 +7,6 @@
       - '{{ ansible_distribution }}.yml'
       skip: true
 
-- name: 'install editors'
-  ansible.builtin.package:
-    name: '{{ item }}'
-    state: 'present'
-  with_items: '{{ packages_editors }}'
-
 - name: 'install goodies'
   ansible.builtin.package:
     name: '{{ item }}'

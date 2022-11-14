@@ -1,19 +1,5 @@
 ---
 
-# editors
-package_ed:     'ed'
-package_emacs:  'emacs'
-package_nano:   'nano'
-package_neovim: 'neovim'
-package_vim:    'vim'
-
-packages_editors:
-  - '{{ package_ed }}'
-  - '{{ package_emacs }}'
-  - '{{ package_nano }}'
-  - '{{ package_neovim }}'
-  - '{{ package_vim }}'
-
 # goodies
 package_cbonsai:  'cbonsai'
 package_cowsay:   'cowsay'
