@@ -1,0 +1,38 @@
+---
+
+- name: 'include OS-specific vars'
+  ansible.builtin.include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+      - '{{ ansible_distribution }}.yml'
+      skip: true
+
+- name: 'install ed'
+  ansible.builtin.package:
+    name: '{{ package_ed }}'
+    state: 'present'
+
+- name: 'install Emacs'
+  ansible.builtin.package:
+    name: '{{ package_emacs }}'
+    state: 'present'
+
+- name: 'install nano'
+  ansible.builtin.package:
+    name: '{{ package_nano }}'
+    state: 'present'
+
+- name: 'install Neovim'
+  ansible.builtin.package:
+    name: '{{ package_neovim }}'
+    state: 'present'
+
+- name: 'install Vim'
+  ansible.builtin.package:
+    name: '{{ package_vim }}'
+    state: 'present'
+
+- name: 'install Visual Studio Code'
+  ansible.builtin.package:
+    name: '{{ package_vscode }}'
+    state: 'present'

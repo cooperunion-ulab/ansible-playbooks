@@ -1,0 +1,8 @@
+---
+
+package_ed:     'sys-apps/ed'
+package_emacs:  'app-editors/emacs'
+package_nano:   'app-editors/nano'
+package_neovim: 'app-editors/neovim'
+package_vim:    'app-editors/vim'
+package_vscode: 'app-editors/vscode'
