@@ -1,0 +1,5 @@
+---
+
+crossdev_repo_masters: 'gentoo'
+crossdev_repo_name:    'crossdev'
+crossdev_repo_path:    '/var/db/repos/crossdev'

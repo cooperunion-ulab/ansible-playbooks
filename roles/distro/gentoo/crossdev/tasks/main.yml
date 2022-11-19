@@ -1,0 +1,34 @@
+---
+
+- name: 'create local `crossdev` repo'
+  block:
+    - name: 'create repository directories'
+      ansible.builtin.file:
+        path: '{{ crossdev_repo_path }}/{{ item }}'
+        owner: 'portage'
+        group: 'portage'
+        state: 'directory'
+      with_items:
+        - 'profiles'
+        - 'metadata'
+
+    - name: 'set repository name'
+      ansible.builtin.lineinfile:
+        line: '{{ crossdev_repo_name }}'
+        path: '{{ crossdev_repo_path }}/profiles/repo_name'
+        owner: 'portage'
+        group: 'portage'
+        create: 'yes'
+
+    - name: 'set repository masters'
+      ansible.builtin.lineinfile:
+        line: 'masters = {{ crossdev_repo_masters }}'
+        path: '{{ crossdev_repo_path }}/metadata/layout.conf'
+        owner: 'portage'
+        group: 'portage'
+        create: 'yes'
+
+- name: 'install crossdev'
+  ansible.builtin.package:
+    name: '{{ package_crossdev }}'
+    state: 'present'
