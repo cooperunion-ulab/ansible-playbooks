@@ -9,6 +9,7 @@
   become: true
   roles:
     - 'distro/gentoo/portage'
+    - 'distro/gentoo/crossdev'
 
 - hosts: 'all'
   become: true
