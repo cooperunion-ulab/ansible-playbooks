@@ -6,6 +6,7 @@
   become: true
   roles:
     - 'common'
+    - 'net/firewall'
 
 - hosts: 'ee'
   become: true
