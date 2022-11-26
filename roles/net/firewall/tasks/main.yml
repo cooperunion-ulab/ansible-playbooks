@@ -1,0 +1,57 @@
+---
+
+- name: 'include OS-specific vars'
+  ansible.builtin.include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+      - '{{ ansible_distribution }}.yml'
+      skip: true
+
+- name: 'install UWF'
+  ansible.builtin.package:
+    name: '{{ package_ufw }}'
+    state: 'present'
+
+- name: 'enable logging'
+  community.general.ufw:
+    logging: 'on'
+
+- name: 'allow RFC1918 networks'
+  community.general.ufw:
+    rule: 'allow'
+    from_ip: '{{ item }}'
+  with_items:
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+    - '192.168.0.0/16'
+
+- name: 'allow ulab network'
+  community.general.ufw:
+    rule: 'allow'
+    from_ip: '199.98.27.0/24'
+
+- name: 'allow OpenSSH'
+  community.general.ufw:
+    rule: 'allow'
+    port: '{{ item }}'
+    proto: 'tcp'
+  with_items: '{{ sshd_ports }}'
+
+- name: 'allow Mosh'
+  community.general.ufw:
+    rule: 'allow'
+    name: 'mosh'
+
+- name: 'reject all incoming traffic by default'
+  community.general.ufw:
+    default: 'reject'
+
+- name: 'enable UFW'
+  community.general.ufw:
+    state: 'enabled'
+
+- name: 'enable UFW service'
+  ansible.builtin.service:
+    name: '{{ ufwd }}'
+    state: 'started'
+    enabled: true
