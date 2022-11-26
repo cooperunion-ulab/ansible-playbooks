@@ -1,5 +1,9 @@
 ---
 
+ipaclient_domain:  'ee.cooper.edu'
+ipaclient_realm:   'EE.COOPER.EDU'
+ipaclient_servers: 'ipa.ee.cooper.edu'
+
 sshd_ports:
   - 22
   - 31415
