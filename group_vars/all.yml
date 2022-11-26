@@ -1,3 +1,6 @@
 ---
 
 timezone: 'America/New_York'
+
+sshd_ports:
+  - 22
