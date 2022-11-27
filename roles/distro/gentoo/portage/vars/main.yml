@@ -1,4 +1,4 @@
 ---
 
 portage_dir:  '/etc/portage'
-portage_repo: 'https://github.com/cooper-microlab/etc-portage.git'
+portage_repo: 'https://github.com/cooperunion-ulab/etc-portage.git'
