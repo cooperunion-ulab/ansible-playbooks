@@ -28,6 +28,7 @@ packages_shells:
 
 # utils
 package_bat:        'bat'
+package_direnv:     'direnv'
 package_exa:        'exa'
 package_fd:         'fd'
 package_fzf:        'fzf'
@@ -45,6 +46,7 @@ package_tree:       'tree'
 
 packages_utils:
   - '{{ package_bat }}'
+  - '{{ package_direnv }}'
   - '{{ package_exa }}'
   - '{{ package_fd }}'
   - '{{ package_fzf }}'
