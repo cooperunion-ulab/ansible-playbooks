@@ -11,10 +11,17 @@
   ansible.builtin.package:
     name: '{{ package_ufw }}'
     state: 'present'
+  register: 'install_ufw'
+
+- name: 'disable UFW for initial configuration'
+  community.general.ufw:
+    state: 'disabled'
+  when: 'install_ufw.changed'
 
 - name: 'enable logging'
   community.general.ufw:
     logging: 'on'
+  when: 'install_ufw.changed'
 
 - name: 'allow RFC1918 networks'
   community.general.ufw:
