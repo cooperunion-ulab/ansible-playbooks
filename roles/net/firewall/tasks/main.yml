@@ -47,7 +47,8 @@
 - name: 'allow Mosh'
   community.general.ufw:
     rule: 'allow'
-    name: 'mosh'
+    port: '60000:61000'
+    proto: 'udp'
 
 - name: 'reject all incoming traffic by default'
   community.general.ufw:
