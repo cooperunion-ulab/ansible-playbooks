@@ -8,7 +8,9 @@
   ansible.builtin.package:
     name: '{{ systemd_timesyncd }}'
     state: 'present'
-  when: ansible_facts['distribution'] != 'Gentoo'
+  when:
+    - ansible_facts['distribution'] != 'Fedora'
+    - ansible_facts['distribution'] != 'Gentoo'
 
 - name: 'enable NTP daemon (`{{ ntp_daemon }}`)'
   ansible.builtin.service:
