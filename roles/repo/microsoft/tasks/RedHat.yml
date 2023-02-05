@@ -1,0 +1,15 @@
+---
+
+- name: 'ensure Microsoft rpm key is present'
+  ansible.builtin.rpm_key:
+    state: 'present'
+    key: 'https://packages.microsoft.com/keys/microsoft.asc'
+
+- name: 'add Microsoft yum repo'
+  ansible.builtin.yum_repository:
+    state: 'present'
+    name: 'microsoft'
+    description: 'microsoft'
+    baseurl: 'https://packages.microsoft.com/yumrepos/vscode'
+    gpgcheck: true
+    gpgkey: 'https://packages.microsoft.com/keys/microsoft.asc'
