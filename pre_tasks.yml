@@ -15,3 +15,8 @@
   become: true
   roles:
     - 'sys/time'
+
+- hosts: 'ee'
+  become: true
+  roles:
+    - 'freeipa.ansible_freeipa.ipaclient'
