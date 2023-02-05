@@ -16,5 +16,6 @@
     - name: 'register retrieved passwords'
       ansible.builtin.set_fact:
         passwd: {
-          'kerberos' : '{{ kerberos_admin_passwd.stdout | default("") }}',
+          'kerberos': '{{ kerberos_admin_passwd.stdout | default("") }}',
         }
+        ipaadmin_password: '{{ kerberos_admin_passwd.stdout | default("") }}'
