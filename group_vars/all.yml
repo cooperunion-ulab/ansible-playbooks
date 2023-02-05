@@ -4,5 +4,7 @@ ipaclient_no_ntp: true  # ntp configured by role 'sys/time'
 
 timezone: 'America/New_York'
 
+pass_cmd: 'ulab-pass'
+
 sshd_ports:
   - 22

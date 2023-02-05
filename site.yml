@@ -1,5 +1,8 @@
 ---
 
+- import_playbook: 'pass.yml'
+  when: pass | default(false) | bool
+
 - import_playbook: 'pre_tasks.yml'
 
 - hosts: 'all'
