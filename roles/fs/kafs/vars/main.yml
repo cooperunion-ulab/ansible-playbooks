@@ -1,0 +1,10 @@
+---
+
+pkg_kafs_client: 'kafs-client'
+pkg_kafs_client_compat: 'kafs-client-compat'
+pkg_kafs_client_libs: 'kafs-client-libs'
+
+kafs_client_packages:
+  - '{{ pkg_kafs_client }}'
+  - '{{ pkg_kafs_client_compat }}'
+  - '{{ pkg_kafs_client_libs }}'

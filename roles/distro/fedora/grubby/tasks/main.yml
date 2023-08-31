@@ -1,0 +1,10 @@
+---
+
+- name: Disable SELinux
+  command: 'grubby --update-kernel ALL --args selinux=0'
+
+- name: Disable rhgb boot
+  command: 'grubby --update-kernel ALL --remove-args rhgb'
+
+- name: Disable quiet boot
+  command: 'grubby --update-kernel ALL --remove-args quiet'

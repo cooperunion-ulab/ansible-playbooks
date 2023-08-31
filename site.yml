@@ -9,16 +9,29 @@
   become: true
   roles:
     - 'common'
-    - 'net/firewall'
+
+- hosts: 'ufw'
+  become: true
+  roles:
+     - 'net/firewall'
+
+- hosts: 'firewalld'
+  become: true
+  roles:
+     - 'net/firewalld'
 
 - hosts: 'ee'
   become: true
   roles:
     - 'net/ssh'
     - 'pkg/build'
-    - 'pkg/can'
-    - 'pkg/container'
     - 'pkg/editor'
+
+- hosts: 'autonomylab'
+  become: true
+  roles:
+    - 'pkg/container'
+    - 'pkg/can'
 
 - hosts: 'cs102'
   become: true
@@ -26,3 +39,11 @@
     - 'course/cs102'
     - 'pkg/build'
     - 'pkg/editor'
+
+- hosts: 'mudbug'
+  become: true
+  roles:
+    - 'distro/fedora/gnome'
+    - 'distro/fedora/grubby'
+    - 'fs/auristorfs'
+    - 'orgs/mudbug'

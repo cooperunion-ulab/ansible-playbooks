@@ -25,6 +25,12 @@
     state: 'present'
   with_items: '{{ packages_utils }}'
 
+- name: 'install greet script'
+  ansible.builtin.copy:
+    src: 'res/ulab.sh'
+    dest: '/etc/profile.d/ulab.sh'
+    mode: 0755
+
 - name: 'include OS-specific tasks'
   ansible.builtin.include_tasks: '{{ item }}'
   with_first_found:

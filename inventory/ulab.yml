@@ -11,6 +11,14 @@ ulab:
       hosts:
         dev.ee.cooper.edu:
 
+    mudbug:
+      hosts:
+        mudbug1.ee.cooper.edu:
+        mudbug2.ee.cooper.edu:
+        mudbug3.ee.cooper.edu:
+        mudbug4.ee.cooper.edu:
+
+
     # ice:
     #   hosts:
     #     ice[01:12].ee.cooper.edu

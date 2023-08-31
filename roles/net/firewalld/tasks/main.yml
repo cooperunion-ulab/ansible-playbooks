@@ -1,0 +1,13 @@
+---
+
+- name: 'allow OpenSSH'
+  ansible.posix.firewalld:
+    service: ssh
+    permanent: true
+    state: enabled
+
+- name: 'allow port 31415 OpenSSH'
+  ansible.posix.firewalld:
+    port: 31415/tcp
+    permanent: true
+    state: enabled

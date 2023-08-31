@@ -1,0 +1,9 @@
+[org/gnome/login-screen]
+banner-message-enable=true
+banner-message-text='Login with your EE μLab account credentials'
+disable-restart-buttons=true
+disable-user-list=true
+logo='/afs/ee.cooper.edu/dist/cooper.jpg'
+
+[org/gnome/desktop/session]
+idle-delay=0

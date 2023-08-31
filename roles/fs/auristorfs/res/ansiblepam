@@ -1,0 +1,2 @@
+system-auth auth optional pam_afs_session.so
+system-auth session required pam_afs_session.so

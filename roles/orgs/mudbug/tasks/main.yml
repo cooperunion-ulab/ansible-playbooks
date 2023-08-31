@@ -1,0 +1,30 @@
+---
+
+- name: Upgrade all packages
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+
+- name: Install KiCAD
+  ansible.builtin.dnf:
+    name:
+      - 'kicad'
+      - 'kicad-packages3d'
+      - 'kicad-doc'
+    state: 'latest'
+
+- name: Add Flathub to Flatpak
+  community.general.flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+
+- name: Install Arduino IDE
+  community.general.flatpak:
+    name: cc.arduino.arduinoide
+    state: present
+
+- name: Add open access udev rule
+  copy:
+    src: '../res/00-open-access.rules'
+    dest: '/etc/udev/rules.d/00-open-access.rules'
