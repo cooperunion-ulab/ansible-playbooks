@@ -13,8 +13,8 @@ YAMLLINT ?= yamllint
 YAMLFIX ?= yamlfix
 
 
-MARKDOWN_FILES += $(shell fd -e md)
-YAML_FILES     += $(shell fd -e yaml -e yml)
+MARKDOWN_FILES += $(shell fd --extension md)
+YAML_FILES     += $(shell fd --hidden --extension yaml --extension yml)
 
 
 .PHONY: all
