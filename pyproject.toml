@@ -26,6 +26,7 @@ dev = [
 	'mdformat-gfm',
 	'pip-tools',
 	'pre-commit',
+	'yamlfix',
 	'yamllint',
 ]
 
@@ -38,3 +39,9 @@ verbose         = true
 
 [tool.setuptools.packages.find]
 exclude = ['*']
+
+[tool.yamlfix]
+none_representation  = '~'
+section_whitelines   = 1
+sequence_style       = 'block_style'
+whitelines           = 1
