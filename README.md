@@ -2,15 +2,10 @@
 
 > Cooper Union μLab Ansible playbooks
 
-
 ## Copyright & Licensing
 
-Copyright (C) 2022  Cooper Union μLab
-
-Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
+Copyright (C) 2022--2023 Cooper Union μLab
 
 Distributed under the [GPLv3] or later.
 
-
-[`<jacobkoziej@gmail.com>`]: mailto:jacobkoziej@gmail.com
-[GPLv3]: LICENSE.md
+[gplv3]: LICENSE.md
