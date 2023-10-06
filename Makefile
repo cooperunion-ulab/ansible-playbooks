@@ -8,6 +8,8 @@ MDFORMATFLAGS +=  \
 
 PIPCOMPILE ?= pip-compile
 
+YAMLLINT ?= yamllint
+
 
 .PHONY: all
 all:
@@ -16,6 +18,11 @@ all:
 .PHONY: fmt
 fmt:
 	@$(MDFORMAT) $(MDFORMATFLAGS) README.md
+
+
+.PHONY: lint
+lint:
+	@$(YAMLLINT) .
 
 
 .PHONY: dev-requirements.txt
