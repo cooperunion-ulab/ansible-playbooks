@@ -23,6 +23,7 @@ repo = 'https://github.com/cooperunion-ulab/ansible-playbooks'
 
 [project.optional-dependencies]
 dev = [
+	'ansible-lint',
 	'mdformat-gfm',
 	'pip-tools',
 	'pre-commit',
