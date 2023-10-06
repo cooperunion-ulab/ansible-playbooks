@@ -10,6 +10,12 @@ PIPCOMPILE ?= pip-compile
 
 YAMLLINT ?= yamllint
 
+YAMLFIX ?= yamlfix
+
+
+MARKDOWN_FILES += $(shell fd -e md)
+YAML_FILES     += $(shell fd -e yaml -e yml)
+
 
 .PHONY: all
 all:
@@ -17,12 +23,13 @@ all:
 
 .PHONY: fmt
 fmt:
-	@$(MDFORMAT) $(MDFORMATFLAGS) README.md
+	@$(MDFORMAT) $(MDFORMATFLAGS) $(MARKDOWN_FILES)
+	@$(YAMLFIX) $(YAML_FILES)
 
 
 .PHONY: lint
 lint:
-	@$(YAMLLINT) .
+	@$(YAMLLINT) $(YAML_FILES)
 
 
 .PHONY: dev-requirements.txt
