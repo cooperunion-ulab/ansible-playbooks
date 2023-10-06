@@ -26,6 +26,7 @@ dev = [
 	'mdformat-gfm',
 	'pip-tools',
 	'pre-commit',
+	'yamllint',
 ]
 
 [tool.pip-tools]
