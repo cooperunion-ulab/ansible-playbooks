@@ -13,7 +13,7 @@ YAMLLINT ?= yamllint
 YAMLFIX ?= yamlfix
 
 
-MARKDOWN_FILES += $(shell fd --extension md)
+MARKDOWN_FILES += $(shell fd --exclude 'LICENSE\.md' --extension md)
 YAML_FILES     += $(shell fd --hidden --extension yaml --extension yml)
 
 
