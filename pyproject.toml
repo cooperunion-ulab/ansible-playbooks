@@ -1,0 +1,39 @@
+[build-system]
+requires      = ['setuptools']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name        = 'ansible-playbooks'
+description = 'Cooper Union μLab Ansible playbooks'
+version     = '0.0.0'
+
+authors = [
+	{name = 'Gary Kim', email = 'gary@garykim.dev'},
+	{name = 'Jacob Koziej', email = 'jacobkoziej@gmail.com'},
+]
+license = {'text' = 'GPL-3.0-or-later'}
+
+requires-python = '>=3.11'
+dependencies = [
+	'ansible',
+]
+
+[project.urls]
+repo = 'https://github.com/cooperunion-ulab/ansible-playbooks'
+
+[project.optional-dependencies]
+dev = [
+	'mdformat-gfm',
+	'pip-tools',
+	'pre-commit',
+]
+
+[tool.pip-tools]
+allow-unsafe    = true
+generate-hashes = true
+strip-extras    = false
+upgrade         = true
+verbose         = true
+
+[tool.setuptools.packages.find]
+exclude = ['*']
