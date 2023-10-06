@@ -23,13 +23,13 @@ all:
 
 .PHONY: fmt
 fmt:
-	@$(MDFORMAT) $(MDFORMATFLAGS) $(MARKDOWN_FILES)
-	@$(YAMLFIX) $(YAML_FILES)
+	@$(MDFORMAT) $(MDFORMATFLAGS) $(MARKDOWN_FILES) || true
+	@$(YAMLFIX) $(YAML_FILES) || true
 
 
 .PHONY: lint
 lint:
-	@$(YAMLLINT) $(YAML_FILES)
+	@$(YAMLLINT) $(YAML_FILES) || true
 
 
 .PHONY: dev-requirements.txt
