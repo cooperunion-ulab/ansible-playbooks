@@ -7,7 +7,7 @@
         argv:
           - '{{ pass_cmd }}'
           - kerberos/ee.cooper.edu
-      register: kerberos_admin_passwd
+      register: kerberos_admin_password
       delegate_to: localhost
       changed_when: false
 
@@ -15,5 +15,6 @@
   tasks:
     - name: register retrieved passwords
       ansible.builtin.set_fact:
-        passwd: {kerberos: '{{ kerberos_admin_passwd.stdout | default("") }}'}
-        ipaadmin_password: '{{ kerberos_admin_passwd.stdout | default("") }}'
+        # yamllint disable-line rule:line-length
+        password: {kerberos: '{{ kerberos_admin_password.stdout | default("") }}'}
+        ipaadmin_password: '{{ kerberos_admin_password.stdout | default("") }}'
