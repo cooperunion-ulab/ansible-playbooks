@@ -5,9 +5,9 @@ all:
 
     ee:
       children:
-        autonomylab:
-        ulab:
+        autonomylab: ~
+        ulab: ~
 
     gentoo:
       children:
-        dev:
+        dev: ~

@@ -2,16 +2,16 @@
 
 - name: Upgrade all packages
   ansible.builtin.dnf:
-    name: "*"
+    name: '*'
     state: latest
 
 - name: Install KiCAD
   ansible.builtin.dnf:
     name:
-      - 'kicad'
-      - 'kicad-packages3d'
-      - 'kicad-doc'
-    state: 'latest'
+      - kicad
+      - kicad-packages3d
+      - kicad-doc
+    state: latest
 
 - name: Add Flathub to Flatpak
   community.general.flatpak_remote:
@@ -26,5 +26,5 @@
 
 - name: Add open access udev rule
   copy:
-    src: '../res/00-open-access.rules'
-    dest: '/etc/udev/rules.d/00-open-access.rules'
+    src: ../res/00-open-access.rules
+    dest: /etc/udev/rules.d/00-open-access.rules

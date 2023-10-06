@@ -1,8 +1,8 @@
 ---
 
-- name: 'include OS-family tasks'
+- name: include OS-family tasks
   ansible.builtin.include_tasks: '{{ item }}'
   with_first_found:
     - files:
-      - '{{ ansible_os_family }}.yml'
+        - '{{ ansible_os_family }}.yml'
       skip: true

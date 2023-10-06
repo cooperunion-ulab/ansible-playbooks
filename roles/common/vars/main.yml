@@ -1,12 +1,12 @@
 ---
 
 # goodies
-package_cbonsai:  'cbonsai'
-package_cowsay:   'cowsay'
-package_fortune:  'fortune'
-package_lolcat:   'lolcat'
-package_neofetch: 'neofetch'
-package_sl:       'sl'
+package_cbonsai: cbonsai
+package_cowsay: cowsay
+package_fortune: fortune
+package_lolcat: lolcat
+package_neofetch: neofetch
+package_sl: sl
 
 packages_goodies:
   - '{{ package_cbonsai }}'
@@ -17,9 +17,9 @@ packages_goodies:
   - '{{ package_sl }}'
 
 # shells
-package_bash: 'bash'
-package_fish: 'fish'
-package_zsh:  'zsh'
+package_bash: bash
+package_fish: fish
+package_zsh: zsh
 
 packages_shells:
   - '{{ package_bash }}'
@@ -27,22 +27,22 @@ packages_shells:
   - '{{ package_zsh }}'
 
 # utils
-package_bat:        'bat'
-package_direnv:     'direnv'
-package_exa:        'exa'
-package_fd:         'fd'
-package_fzf:        'fzf'
-package_git:        'git'
-package_git_lfs:    'git-lfs'
-package_gnupg:      'gnupg'
-package_htop:       'htop'
-package_man:        'man'
-package_man_pages:  'man-pages'
-package_ripgrep:    'ripgrep'
-package_shellcheck: 'shellcheck'
-package_shfmt:      'shfmt'
-package_tmux:       'tmux'
-package_tree:       'tree'
+package_bat: bat
+package_direnv: direnv
+package_exa: exa
+package_fd: fd
+package_fzf: fzf
+package_git: git
+package_git_lfs: git-lfs
+package_gnupg: gnupg
+package_htop: htop
+package_man: man
+package_man_pages: man-pages
+package_ripgrep: ripgrep
+package_shellcheck: shellcheck
+package_shfmt: shfmt
+package_tmux: tmux
+package_tree: tree
 
 packages_utils:
   - '{{ package_bat }}'

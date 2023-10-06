@@ -1,57 +1,60 @@
 ---
 
-- name: 'include OS-specific vars'
+- name: include OS-specific vars
   ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
-      - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_distribution }}.yml'
       skip: true
 
-- name: 'install OpenSSH'
+- name: install OpenSSH
   ansible.builtin.package:
     name: '{{ package_openssh }}'
-    state: 'present'
+    state: present
 
-- name: 'install Mosh'
+- name: install Mosh
   ansible.builtin.package:
     name: '{{ package_mosh }}'
-    state: 'present'
+    state: present
 
 # NOTE: this might not handle more than two ports properly!
-- name: 'enable port(s) `{{ sshd_ports }}`'
+- name: enable port(s) `{{ sshd_ports }}`
   ansible.builtin.lineinfile:
-    line: 'Port {{ item }}'
+    line: Port {{ item }}
     path: '{{ sshd_config }}'
-    regexp: '^#\s*Port\s*22\s*$'
-    insertafter: 'Port {{ sshd_ports[0] }}'
+    regexp: ^#\s*Port\s*22\s*$
+    insertafter: Port {{ sshd_ports[0] }}
   with_items: '{{ sshd_ports }}'
-  notify: 'restart sshd'
+  notify: restart sshd
 
-- name: 'disable root login'
+- name: disable root login
   ansible.builtin.lineinfile:
-    line: 'PermitRootLogin no'
+    line: PermitRootLogin no
     path: '{{ sshd_config }}'
-    regexp: '^(#\s*PermitRootLogin\s*(forced-commands-only|no|prohibit-password|yes)|\s*PermitRootLogin\s*(forced-commands-only|prohibit-password|yes))\s*$'
-  notify: 'restart sshd'
+    # yamllint disable-line rule:line-length
+    regexp: ^(#\s*PermitRootLogin\s*(forced-commands-only|no|prohibit-password|yes)|\s*PermitRootLogin\s*(forced-commands-only|prohibit-password|yes))\s*$
+  notify: restart sshd
 
-- name: 'disable empty passwords'
+- name: disable empty passwords
   ansible.builtin.lineinfile:
-    line: 'PermitEmptyPasswords no'
+    line: PermitEmptyPasswords no
     path: '{{ sshd_config }}'
-    regexp: '^(#\s*PermitEmptyPasswords\s*(no|yes)|\s*PermitEmptyPasswords\s*yes)\s*$'
-  notify: 'restart sshd'
+    # yamllint disable-line rule:line-length
+    regexp: ^(#\s*PermitEmptyPasswords\s*(no|yes)|\s*PermitEmptyPasswords\s*yes)\s*$
+  notify: restart sshd
 
-- name: 'set SELinux policy to allow SSH daemon to listen on tcp port(s) `{{ sshd_ports }}`'
+# yamllint disable-line rule:line-length
+- name: set SELinux policy to allow SSH daemon to listen on tcp port(s) `{{ sshd_ports }}`
   community.general.seport:
     ports: '{{ item }}'
-    proto: 'tcp'
-    setype: 'ssh_port_t'
-    state: 'present'
+    proto: tcp
+    setype: ssh_port_t
+    state: present
   with_items: '{{ sshd_ports }}'
   when: ansible_facts.selinux.status == 'enabled'
 
-- name: 'enable SSH daemon'
+- name: enable SSH daemon
   ansible.builtin.service:
     enabled: true
     name: '{{ sshd }}'
-    state: 'started'
+    state: started

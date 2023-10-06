@@ -1,6 +1,6 @@
 ---
 
 # utils
-package_fd:        'fd-find'
-package_man:       'man-db'
-package_man_pages: 'manpages-posix-dev'
+package_fd: fd-find
+package_man: man-db
+package_man_pages: manpages-posix-dev

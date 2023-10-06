@@ -1,49 +1,49 @@
 ---
 
-- import_playbook: 'pass.yml'
+- import_playbook: pass.yml
   when: pass | default(false) | bool
 
-- import_playbook: 'pre_tasks.yml'
+- import_playbook: pre_tasks.yml
 
-- hosts: 'all'
+- hosts: all
   become: true
   roles:
-    - 'common'
+    - common
 
-- hosts: 'ufw'
+- hosts: ufw
   become: true
   roles:
-     - 'net/firewall'
+    - net/firewall
 
-- hosts: 'firewalld'
+- hosts: firewalld
   become: true
   roles:
-     - 'net/firewalld'
+    - net/firewalld
 
-- hosts: 'ee'
+- hosts: ee
   become: true
   roles:
-    - 'net/ssh'
-    - 'pkg/build'
-    - 'pkg/editor'
+    - net/ssh
+    - pkg/build
+    - pkg/editor
 
-- hosts: 'autonomylab'
+- hosts: autonomylab
   become: true
   roles:
-    - 'pkg/container'
-    - 'pkg/can'
+    - pkg/container
+    - pkg/can
 
-- hosts: 'cs102'
+- hosts: cs102
   become: true
   roles:
-    - 'course/cs102'
-    - 'pkg/build'
-    - 'pkg/editor'
+    - course/cs102
+    - pkg/build
+    - pkg/editor
 
-- hosts: 'mudbug'
+- hosts: mudbug
   become: true
   roles:
-    - 'distro/fedora/gnome'
-    - 'distro/fedora/grubby'
-    - 'fs/auristorfs'
-    - 'orgs/mudbug'
+    - distro/fedora/gnome
+    - distro/fedora/grubby
+    - fs/auristorfs
+    - orgs/mudbug

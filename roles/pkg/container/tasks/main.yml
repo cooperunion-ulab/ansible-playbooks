@@ -1,22 +1,22 @@
 ---
 
-- name: 'install Docker'
+- name: install Docker
   ansible.builtin.package:
     name: '{{ package_docker }}'
-    state: 'present'
+    state: present
 
-- name: 'install Docker Compose'
+- name: install Docker Compose
   ansible.builtin.package:
     name: '{{ package_docker_compose }}'
-    state: 'present'
+    state: present
 
-- name: 'install Podman'
+- name: install Podman
   ansible.builtin.package:
     name: '{{ package_podman }}'
-    state: 'present'
+    state: present
 
-- name: 'enable Docker daemon (`{{ docker_daemon }}`)'
+- name: enable Docker daemon (`{{ docker_daemon }}`)
   ansible.builtin.service:
     enabled: true
     name: '{{ docker_daemon }}'
-    state: 'started'
+    state: started

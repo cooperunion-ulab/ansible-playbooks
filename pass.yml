@@ -1,21 +1,19 @@
 ---
 
-- hosts: 'ee'
+- hosts: ee
   tasks:
-    - name: 'get kerberos admin password'
+    - name: get kerberos admin password
       ansible.builtin.command:
         argv:
           - '{{ pass_cmd }}'
-          - 'kerberos/ee.cooper.edu'
-      register: 'kerberos_admin_passwd'
-      delegate_to: 'localhost'
+          - kerberos/ee.cooper.edu
+      register: kerberos_admin_passwd
+      delegate_to: localhost
       changed_when: false
 
-- hosts: 'all'
+- hosts: all
   tasks:
-    - name: 'register retrieved passwords'
+    - name: register retrieved passwords
       ansible.builtin.set_fact:
-        passwd: {
-          'kerberos': '{{ kerberos_admin_passwd.stdout | default("") }}',
-        }
+        passwd: {kerberos: '{{ kerberos_admin_passwd.stdout | default("") }}'}
         ipaadmin_password: '{{ kerberos_admin_passwd.stdout | default("") }}'

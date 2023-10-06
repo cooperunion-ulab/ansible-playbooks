@@ -1,19 +1,19 @@
 ---
 
-- name: 'set timezone to `{{ timezone }}`'
+- name: set timezone to `{{ timezone }}`
   community.general.timezone:
     name: '{{ timezone }}'
 
-- name: 'install `{{ systemd_timesyncd }}`'
+- name: install `{{ systemd_timesyncd }}`
   ansible.builtin.package:
     name: '{{ systemd_timesyncd }}'
-    state: 'present'
+    state: present
   when:
     - ansible_facts['distribution'] != 'Fedora'
     - ansible_facts['distribution'] != 'Gentoo'
 
-- name: 'enable NTP daemon (`{{ ntp_daemon }}`)'
+- name: enable NTP daemon (`{{ ntp_daemon }}`)
   ansible.builtin.service:
     enabled: true
     name: '{{ ntp_daemon }}'
-    state: 'started'
+    state: started

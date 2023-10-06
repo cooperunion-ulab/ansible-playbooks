@@ -2,10 +2,10 @@
 
 ufw:
   children:
-    autonomylab:
-    conway:
-    dev:
+    autonomylab: ~
+    conway: ~
+    dev: ~
 
 firewalld:
   children:
-    mudbug:
+    mudbug: ~

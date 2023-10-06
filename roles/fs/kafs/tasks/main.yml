@@ -3,20 +3,20 @@
 - name: Install kafs-utils
   ansible.builtin.package:
     name: '{{ kafs_client_packages }}'
-    state: 'present'
+    state: present
 
 - name: Upload thiscell config
   copy:
-    src: '../res/thiscell.conf'
-    dest: '/etc/kafs/client.d/thiscell.conf'
+    src: ../res/thiscell.conf
+    dest: /etc/kafs/client.d/thiscell.conf
 
 - name: Upload ee.cooper.edu cell config
   copy:
-    src: '../res/ee.cooper.edu.conf'
-    dest: '/etc/kafs/client.d/ee.cooper.edu.conf'
+    src: ../res/ee.cooper.edu.conf
+    dest: /etc/kafs/client.d/ee.cooper.edu.conf
 
 - name: Enable AFS Mount
   ansible.builtin.systemd:
-    name: 'afs.mount'
-    state: 'started'
+    name: afs.mount
+    state: started
     enabled: true

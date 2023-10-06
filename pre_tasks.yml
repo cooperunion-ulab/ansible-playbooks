@@ -1,22 +1,22 @@
 ---
 
-- hosts: 'all'
+- hosts: all
   become: true
   roles:
-    - 'repo/microsoft'
+    - repo/microsoft
 
-- hosts: 'gentoo'
+- hosts: gentoo
   become: true
   roles:
-    - 'distro/gentoo/portage'
-    - 'distro/gentoo/crossdev'
+    - distro/gentoo/portage
+    - distro/gentoo/crossdev
 
-- hosts: 'all'
+- hosts: all
   become: true
   roles:
-    - 'sys/time'
+    - sys/time
 
-- hosts: 'ee'
+- hosts: ee
   become: true
   roles:
-    - 'freeipa.ansible_freeipa.ipaclient'
+    - freeipa.ansible_freeipa.ipaclient

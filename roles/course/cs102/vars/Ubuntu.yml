@@ -1,4 +1,4 @@
 ---
 
 # c
-package_linux_headers: 'linux-headers-{{ ansible_kernel }}'
+package_linux_headers: linux-headers-{{ ansible_kernel }}

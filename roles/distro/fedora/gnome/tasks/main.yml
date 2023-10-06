@@ -2,16 +2,16 @@
 
 - name: Set GNOME user prompt
   copy:
-    src: 'res/00-hide-users'
-    dest: '/etc/dconf/db/gdm.d/00-hide-users'
+    src: res/00-hide-users
+    dest: /etc/dconf/db/gdm.d/00-hide-users
 
 - name: Set user-db and system-db
   copy:
-    src: 'res/gdm'
-    dest: '/etc/dconf/profile/gdm'
+    src: res/gdm
+    dest: /etc/dconf/profile/gdm
 
 - name: dconf update
-  command: 'dconf update'
+  command: dconf update
 
 - name: Restart GDM
   systemd:

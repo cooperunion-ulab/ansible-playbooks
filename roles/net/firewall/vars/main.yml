@@ -1,5 +1,5 @@
 ---
 
-package_ufw: 'ufw'
+package_ufw: ufw
 
-ufwd: 'ufw'
+ufwd: ufw

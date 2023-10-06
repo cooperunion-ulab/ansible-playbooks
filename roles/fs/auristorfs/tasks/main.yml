@@ -1,50 +1,51 @@
 ---
 
-- name: 'Install AuriStor repo'
+- name: Install AuriStor repo
   ansible.builtin.dnf:
-    name: 'https://www.auristor.com/downloads/auristor/linux/redhat/auristor-repo-recommended-8-1.noarch.rpm'
+    # yamllint disable-line rule:line-length
+    name: https://www.auristor.com/downloads/auristor/linux/redhat/auristor-repo-recommended-8-1.noarch.rpm
     disable_gpg_check: true
-    state: 'present'
-
-- name: 'Install AuriStor client'
-  ansible.builtin.dnf:
-    name:
-      - 'yfs'
-      - 'yfs-client'
     state: present
 
-- name: 'Install kstart'
+- name: Install AuriStor client
+  ansible.builtin.dnf:
+    name:
+      - yfs
+      - yfs-client
+    state: present
+
+- name: Install kstart
   ansible.builtin.dnf:
     name: kstart
     state: present
 
-- name: 'Install pam_afs_session'
+- name: Install pam_afs_session
   ansible.builtin.dnf:
     name: pam_afs_session
     state: present
 
 - name: Upload profile.d for krenew
   copy:
-    src: 'res/krenew.sh'
-    dest: '/etc/profile.d/krenew.sh'
+    src: res/krenew.sh
+    dest: /etc/profile.d/krenew.sh
     mode: 0755
 
 - name: Upload AuriStor client config
   copy:
-    src: 'res/ansible.conf'
-    dest: '/etc/yfs/yfs-client.conf.d/ansible.conf'
+    src: res/ansible.conf
+    dest: /etc/yfs/yfs-client.conf.d/ansible.conf
 
-- name: 'Enable AuriStor client'
+- name: Enable AuriStor client
   ansible.builtin.systemd:
-    name: 'yfs-client.service'
-    state: 'started'
+    name: yfs-client.service
+    state: started
     enabled: true
   ignore_errors: true
 
-- name: 'Disable remotefs target'
+- name: Disable remotefs target
   # Required to fix an issue where remote-fs.target sometimes won't ever be
   # met and so the system will simply not boot.
   ansible.builtin.systemd:
-    name: 'remote-fs.target'
-    state: 'stopped'
+    name: remote-fs.target
+    state: stopped
     enabled: false

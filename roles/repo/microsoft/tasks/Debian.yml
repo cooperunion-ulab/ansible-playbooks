@@ -1,15 +1,17 @@
 ---
 
-- name: 'ensure Microsoft apt key is present'
+- name: ensure Microsoft apt key is present
   ansible.builtin.get_url:
-    url: 'https://packages.microsoft.com/keys/microsoft.asc'
-    dest: '/etc/apt/keyrings/packages.microsoft.asc'
-    owner: 'root'
-    group: 'root'
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    dest: /etc/apt/keyrings/packages.microsoft.asc
+    owner: root
+    group: root
     mode: 0644
 
-- name: 'add Microsoft apt repo'
+- name: add Microsoft apt repo
   ansible.builtin.apt_repository:
-    filename: 'packages.microsoft'
-    repo: 'deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.asc] https://packages.microsoft.com/repos/code stable main'
-    state: 'present'
+    filename: packages.microsoft
+    # yamllint disable-line rule:line-length
+    repo: deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.asc]
+      https://packages.microsoft.com/repos/code stable main
+    state: present

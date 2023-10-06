@@ -1,18 +1,18 @@
 ---
 
-- name: 'install NFS-Utils'
+- name: install NFS-Utils
   ansible.builtin.package:
     name: '{{ package_nfs_utils }}'
-    state: 'present'
+    state: present
 
-- name: 'ensure `{{ nfs_mnt_point }}` exists'
+- name: ensure `{{ nfs_mnt_point }}` exists
   ansible.builtin.file:
     path: '{{ nfs_mnt_point }}'
-    state: 'directory'
+    state: directory
 
-- name: 'mount `{{ nfs_share }}` to `{{ nfs_mnt_point }}`'
+- name: mount `{{ nfs_share }}` to `{{ nfs_mnt_point }}`
   ansible.posix.mount:
     src: '{{ nfs_share }}'
     path: '{{ nfs_mnt_point }}'
-    fstype: 'nfs'
-    state: 'mounted'
+    fstype: nfs
+    state: mounted

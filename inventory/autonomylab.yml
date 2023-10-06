@@ -5,19 +5,19 @@ autonomylab:
 
     ctrls:
       hosts:
-        ctrls-heehee.host.autonomylab.nyc:
+        ctrls-heehee.host.autonomylab.nyc: ~
 
     dbw:
       hosts:
-        dbw-gucci.host.autonomylab.nyc:
-        dbw-prada.host.autonomylab.nyc:
+        dbw-gucci.host.autonomylab.nyc: ~
+        dbw-prada.host.autonomylab.nyc: ~
 
     laptop:
       hosts:
-        laptop-car-sable.host.autonomylab.nyc:
-        laptop-nae-nae-baby.host.autonomylab.nyc:
+        laptop-car-sable.host.autonomylab.nyc: ~
+        laptop-nae-nae-baby.host.autonomylab.nyc: ~
 
     tech:
       hosts:
-        tech-slayyy.host.autonomylab.nyc:
-        tech-yaasss.host.autonomylab.nyc:
+        tech-slayyy.host.autonomylab.nyc: ~
+        tech-yaasss.host.autonomylab.nyc: ~

@@ -1,6 +1,6 @@
 ---
 
 collections:
-  - 'ansible.posix'
-  - 'community.general'
-  - 'freeipa.ansible_freeipa'
+  - ansible.posix
+  - community.general
+  - freeipa.ansible_freeipa
