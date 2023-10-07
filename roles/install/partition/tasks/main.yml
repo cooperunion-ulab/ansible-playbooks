@@ -1,0 +1,22 @@
+---
+
+# community.general.parted is horrible and can go to hell
+# sfdisk is also quite annoying to use
+# we instead script fdisk...
+
+- name: create empty GPT disklabel
+  ansible.builtin.shell:
+    cmd: echo -e 'g\nw\n' | fdisk /dev/{{ install_device }}
+
+- name: create boot partition
+  ansible.builtin.shell:
+    # yamllint disable-line rule:line-length
+    cmd: echo -e 'n\n1\n\n+{{ boot_partition_size }}\nw\n' | fdisk /dev/{{ install_device }}
+
+- name: create primary partition
+  ansible.builtin.shell:
+    cmd: echo -e 'n\n2\n\n\nw\n' | fdisk /dev/{{ install_device }}
+
+- name: mark boot partition as EFI type
+  ansible.builtin.shell:
+    cmd: echo -e 't\n1\n1\nw\n' | fdisk /dev/{{ install_device }}
