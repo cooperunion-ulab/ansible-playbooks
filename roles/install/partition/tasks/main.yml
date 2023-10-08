@@ -20,3 +20,17 @@
 - name: mark boot partition as EFI type
   ansible.builtin.shell:
     cmd: echo -e 't\n1\n1\nw\n' | fdisk {{ install_device }}
+
+- name: get partition_paths
+  ansible.builtin.shell:
+    cmd: fdisk -l {{ install_device }} | tail -n2 | awk '{ print $1 }'
+  changed_when: false
+  register: partition_paths
+
+- name: register boot partition path
+  ansible.builtin.set_fact:
+    boot_partition: '{{ partition_paths.stdout_lines[0] }}'
+
+- name: register primary partition path
+  ansible.builtin.set_fact:
+    primary_partition: '{{ partition_paths.stdout_lines[1] }}'
