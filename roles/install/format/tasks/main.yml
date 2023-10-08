@@ -1,0 +1,31 @@
+---
+
+- name: format boot partition
+  community.general.filesystem:
+    dev: '{{ boot_partition }}'
+    force: true
+    fstype: vfat
+
+- name: format primary partition
+  community.general.filesystem:
+    dev: '{{ primary_partition }}'
+    force: true
+    fstype: btrfs
+
+- name: create `{{ distro_subvol }}` subvolume
+  community.general.btrfs_subvolume:
+    filesystem_device: '{{ primary_partition }}'
+    automount: true
+    name: '{{ distro_subvol }}'
+
+- name: create `{{ home_subvol }}` subvolume
+  community.general.btrfs_subvolume:
+    filesystem_device: '{{ primary_partition }}'
+    automount: true
+    name: '{{ home_subvol }}'
+
+- name: create `{{ root_subvol }}` subvolume
+  community.general.btrfs_subvolume:
+    filesystem_device: '{{ primary_partition }}'
+    automount: true
+    name: '{{ root_subvol }}'

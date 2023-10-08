@@ -1,0 +1,5 @@
+---
+
+distro_subvol: /{{ ansible_distribution | lower }}linux
+home_subvol: /home
+root_subvol: /root
